@@ -1,10 +1,11 @@
-KERNEL_DIR=../../imx6ull/linux-imx6ull-4.9.88
+KERNEL_DIR=../../linux-imx6ull-4.9.88/
+CURDIR=${shell pwd}
 
 ARCH=arm
 CROSS_COMPILE=arm-linux-gnueabihf-
 export  ARCH  CROSS_COMPILE
 
-obj-m := rgb-leds.o
+obj-m := gpio-test.o
 
 all:
 	$(MAKE) -C $(KERNEL_DIR) M=$(CURDIR) modules
