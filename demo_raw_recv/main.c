@@ -20,12 +20,12 @@
 
 //18-31-BF-E0-3A-07
 
-#define DEST_MAC0	0x18
-#define DEST_MAC1	0x31
-#define DEST_MAC2	0xBF
-#define DEST_MAC3	0xE0
-#define DEST_MAC4	0x3A
-#define DEST_MAC5	0x07
+#define DEST_MAC0	0xA8
+#define DEST_MAC1	0x03
+#define DEST_MAC2	0x2A
+#define DEST_MAC3	0x56
+#define DEST_MAC4	0xB7
+#define DEST_MAC5	0x6B
 
 #define ETHER_TYPE	0x0800
 
@@ -101,17 +101,17 @@ repeat:
         gettimeofday(&tv2, NULL);
         printf("[ %d %d] raw :%d\n",tv1.tv_usec,tv2.tv_usec,numbytes);
 	}
-    else {
-		printf("Wrong destination MAC: %x:%x:%x:%x:%x:%x\n",
-						eh->ether_shost[0],
-						eh->ether_shost[1],
-						eh->ether_shost[2],
-						eh->ether_shost[3],
-						eh->ether_shost[4],
-						eh->ether_shost[5]);
-		ret = -1;
-		goto done;
-	}
+    // else {
+	// 	printf("Wrong destination MAC: %x:%x:%x:%x:%x:%x\n",
+	// 					eh->ether_shost[0],
+	// 					eh->ether_shost[1],
+	// 					eh->ether_shost[2],
+	// 					eh->ether_shost[3],
+	// 					eh->ether_shost[4],
+	// 					eh->ether_shost[5]);
+	// 	ret = -1;
+	// 	goto done;
+	// }
 
 	// /* Get source IP */
 	// ((struct sockaddr_in *)&their_addr)->sin_addr.s_addr = iph->saddr;
