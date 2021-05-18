@@ -174,7 +174,7 @@ alloc_err:
 
 
 static const struct of_device_id gpio_test[] = {
-{ .compatible = "gpio-test"},
+{ .compatible = "zsp,gpio-test"},
   { /* sentinel */ }
 };
 
